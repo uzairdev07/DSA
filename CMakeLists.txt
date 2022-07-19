@@ -7,4 +7,6 @@ include_directories(.)
 
 add_executable(DSA
         main.cpp
+        linear/Array.h
+        linear/Array.cpp
         README.md)
