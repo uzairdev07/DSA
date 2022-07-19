@@ -9,4 +9,6 @@ add_executable(DSA
         main.cpp
         linear/Array.h
         linear/Array.cpp
+        linear/Stack.h
+        linear/Stack.cpp
         README.md)
