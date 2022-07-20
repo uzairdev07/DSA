@@ -6,7 +6,7 @@
 
 Array::Array(int size) {
     if (size < 0) {
-        std::cerr << "The array size must be positive creating an array of size 10." << std::endl;
+        std::cerr << "The array max_size must be positive creating an array of max_size 10." << std::endl;
         max_size = 10;
     } else
         max_size = size;
