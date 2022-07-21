@@ -13,4 +13,6 @@ add_executable(DSA
         linear/Stack.cpp
         linear/queue/Queue.h
         linear/queue/Queue.cpp
+        linear/queue/PriorityQueue.h
+        linear/queue/PriorityQueue.cpp
         README.md)

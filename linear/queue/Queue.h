@@ -22,7 +22,7 @@ public:
     int size() const;
     void print() const;
     ~Queue();
-private:
+protected:
     int* list;
     int f, b, count, max_size; // * f (Front), b (Back)
     void swap(int &x, int &y);
