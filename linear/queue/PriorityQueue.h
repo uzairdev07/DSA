@@ -32,7 +32,7 @@ public:
 
 private:
     int* list;
-    int count, max_size;  // * h (High), l (Low)
+    int count, max_size;
     int shift(int x);
     void swap(int&, int&);
 };

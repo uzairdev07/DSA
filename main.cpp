@@ -3,27 +3,37 @@
 //
 
 #include <iostream>
-#include <linear/queue/PriorityQueue.h>
+#include "linear/linkedList/List.h"
 
 using namespace std;
 
 int main() {
-    PriorityQueue pq;
-    pq.enqueue(10);
-    pq.enqueue(2);
-    pq.enqueue(5);
-    pq.enqueue(1);
-    pq.enqueue(8);
-    pq.print();
-    pq.dequeue();
-    pq.print();
-    pq.enqueue(9);
-    pq.print();
-    pq.dequeue();
-    pq.print();
-    cout << "High: " << pq.getHigh() << endl;
-    cout << "Low: " << pq.getLow() << endl;
-    cout << "Length: " << pq.length() << endl;
-    cout << "Max Size: " << pq.size() << endl;
+    List l{};
+    cout << "Length: " << l.length() << endl;
+    l.insert(10);
+    l.insertFirst(5);
+    l.insert(20);
+    l.insertAt(0, 3);
+    l.print();
+    cout << "Length: " << l.length() << endl;
+    l.replace(5, 7);
+    l.replaceFirst(1);
+    l.replaceLast(15);
+    l.replaceAt(l.length() - 1, 30);
+    l.print();
+    cout << "Length: " << l.length() << endl;
+    l.removeFirst();
+    l.removeLast();
+    l.removeAt(l.length() - 1);
+    l.remove(7);
+    cout << "Length: " << l.length() << endl;
+    l.print();
+    l.insert(10);
+    l.insertFirst(5);
+    l.insert(20);
+    l.insertAt(0, 3);
+    int i = 0;
+    while (i < l.length())
+        cout << l.get(i++) << endl;
     return 0;
 }

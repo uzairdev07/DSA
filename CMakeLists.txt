@@ -15,4 +15,7 @@ add_executable(DSA
         linear/queue/Queue.cpp
         linear/queue/PriorityQueue.h
         linear/queue/PriorityQueue.cpp
+        linear/linkedList/Node.h
+        linear/linkedList/List.h
+        linear/linkedList/List.cpp
         README.md)
