@@ -18,4 +18,6 @@ add_executable(DSA
         linear/linkedList/Node.h
         linear/linkedList/List.h
         linear/linkedList/List.cpp
+        linear/linkedList/CList.h
+        linear/linkedList/CList.cpp
         README.md)
