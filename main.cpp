@@ -3,22 +3,23 @@
 //
 
 #include <iostream>
-#include "linear/linkedList/CList.h"
+#include "linear/linkedList/DList.h"
 
 using namespace std;
 
 int main() {
-    CList list;
-    cout << "Get Last Element: " << list.getTail() << endl;
-    list.insertAtTail(10);
-    cout << "Get First Element: " << list.getHead() << endl;
-    list.insertAtHead(20);
-    list.insertAtTail(70);
-    list.insertAtHead(30);
-    list.insertAtTail(50);
-    cout << "Get First Element: " << list.getHead() << endl;
-    cout << "Get Last Element: " << list.getTail() << endl;
-    cout << "Length: " << list.length() << endl;
+    DList list;
+    list.insertFirst(5);
+    list.insert(10);
+    list.insertFirst(2);
+    list.insert(15);
+    list.print();
+    cout << "List[2]: " << list.get(2) << endl;
+    list.removeAt(2);
+    list.remove(15);
+    list.print();
+    cout << "Reverse: " << endl;
+//    list.reverse();
     list.print();
     return 0;
 }
