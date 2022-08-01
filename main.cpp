@@ -3,23 +3,38 @@
 //
 
 #include <iostream>
-#include "linear/linkedList/DList.h"
+#include "linear/linkedList/CDList.h"
 
 using namespace std;
 
 int main() {
-    DList list;
-    list.insertFirst(5);
-    list.insert(10);
-    list.insertFirst(2);
-    list.insert(15);
+    CDList list;
+    list.insertAtHead(-1);
+    list.insertAtTail(2);
+    list.insertAtTail(3);
+    list.replaceAt(2, 8);
     list.print();
-    cout << "List[2]: " << list.get(2) << endl;
+    list.reverse();
+    cout << "Reverse: ";
+    list.print();
+    list.insertAtHead(2);
+    list.print();
     list.removeAt(2);
-    list.remove(15);
     list.print();
-    cout << "Reverse: " << endl;
-//    list.reverse();
+    list.insertAt(7, 0);
+    list.print();
+    list.removeAtTail();
+    list.remove(7);
+    list.print();
+    list.removeAtHead();
+    list.print();
+    list.replaceTail(8);
+    list.print();
+    list.replaceTail(10);
+    list.print();
+    cout << "Length: " << list.length() << endl;
+    list.reverse();
+    cout << "Reverse: ";
     list.print();
     return 0;
 }
