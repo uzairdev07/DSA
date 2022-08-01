@@ -179,13 +179,21 @@ void CDList::replaceAt(int index, const int item) {
 void CDList::reverse() {
     if (isEmpty())
         return;
-    DNode *first= head, *last = head->prev;
-    while (first->next != head) {
-        int temp = first->value;
-        first->value = last->value;
-        last->value = temp;
-        first = first->next;
-        last = last->prev;
+    if (head != NULL) {
+        DNode *prevNode = head,
+              *currNode = head->next,
+              *tempNode = head;
+        prevNode->next = prevNode;
+        prevNode->prev = prevNode;
+        while (currNode != head) {
+            tempNode = currNode->next;
+            currNode->next = prevNode;
+            prevNode->prev = currNode;
+            head->next = currNode;
+            prevNode = currNode;
+            currNode = tempNode;
+        }
+        head = prevNode;
     }
 }
 
